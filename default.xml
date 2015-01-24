@@ -17,8 +17,10 @@
   <project path="bionic" name="android_bionic" groups="pdk" remote="justremotephone" revision="lollipop-bravo"/>
   <project path="bootable/recovery" name="android_bootable_recovery" remote="justremotephone" revision="lollipop-bravo" groups="pdk" />
   <project path="external/chromium_org" name="android_external_chromium_org" remote="justremotephone" revision="lollipop-bravo"/>
+  <project path="frameworks/native" name="android_platform_frameworks_native" remote="justremotephone" revision="lollipop-bravo" groups="pdk" />
   <project path="frameworks/opt/net/wifi" name="android_frameworks_opt_net_wifi" remote="justremotephone" revision="lollipop-bravo" groups="pdk" />
   <project path="frameworks/opt/telephony" name="android_frameworks_opt_telephony" remote="justremotephone" revision="lollipop-bravo" groups="pdk" />
+  <project path="hardware/libhardware" name="platform_hardware_libhardware" remote="justremotephone" revision="lollipop-bravo" groups="pdk" />
   <project path="hardware/ril" name="android_hardware_ril" remote="justremotephone" revision="lollipop-bravo" groups="pdk" />
   <project path="hardware/broadcom/libbt" name="android_hardware_broadcom_libbt" remote="justremotephone" revision="lollipop-bravo" groups="pdk" />
   <project path="system/netd" name="android_system_netd" remote="justremotephone" revision="lollipop-bravo" groups="pdk" />
@@ -312,7 +314,6 @@
   <project path="frameworks/minikin" name="platform/frameworks/minikin" groups="pdk-cw-fs" />
   <project path="frameworks/ml" name="platform/frameworks/ml" groups="pdk-cw-fs" />
   <project path="frameworks/multidex" name="platform/frameworks/multidex" groups="pdk-cw-fs" />
-  <project path="frameworks/native" name="platform/frameworks/native" groups="pdk" />
   <project path="frameworks/opt/bitmap" name="platform/frameworks/opt/bitmap" />
   <project path="frameworks/opt/bluetooth" name="platform/frameworks/opt/bluetooth" groups="pdk-cw-fs" />
   <project path="frameworks/opt/calendar" name="platform/frameworks/opt/calendar" groups="pdk-cw-fs" />
@@ -354,7 +355,6 @@
   <project path="hardware/intel/img/psb_headers" name="platform/hardware/intel/img/psb_headers" groups="intel" />
   <project path="hardware/intel/img/psb_video" name="platform/hardware/intel/img/psb_video" groups="intel" />
   <project path="hardware/invensense" name="platform/hardware/invensense" groups="invensense" />
-  <project path="hardware/libhardware" name="platform/hardware/libhardware" groups="pdk" />
   <project path="hardware/libhardware_legacy" name="platform/hardware/libhardware_legacy" groups="pdk" />
   <project path="hardware/nvidia/audio" name="platform/hardware/nvidia/audio" groups="nvidia_audio" />
   <project path="hardware/nvidia/tegra124" name="platform/hardware/nvidia/tegra124" groups="tegra124" />
