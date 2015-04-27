@@ -2,19 +2,44 @@
 <manifest>
 
   <remote  name="aosp"
-           fetch=".." />
+           fetch="https://android.googlesource.com/" />
+  <remote  name="justremotephone"
+           fetch="git://github.com/justremotephone/" />
+
   <default revision="refs/tags/android-5.1.1_r1"
            remote="aosp"
            sync-j="4" />
 
-  <project path="build" name="platform/build" groups="pdk,tradefed" >
+  <project path="build" name="android_build" groups="ev-aosp" remote="justremotephone" revision="android-5.1-bravo">
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
+  <project path="bionic" name="android_bionic" groups="pdk" remote="justremotephone" revision="android-5.1-bravo"/>
+  <project path="bootable/recovery" name="android_bootable_recovery" remote="justremotephone" revision="android-5.1-bravo" groups="pdk" />
+  <project path="frameworks/native" name="android_platform_frameworks_native" remote="justremotephone" revision="android-5.1-bravo" groups="pdk" />
+  <project path="frameworks/opt/net/wifi" name="android_frameworks_opt_net_wifi" remote="justremotephone" revision="android-5.1-bravo" groups="pdk" />
+  <project path="frameworks/opt/telephony" name="android_frameworks_opt_telephony" remote="justremotephone" revision="android-5.1-bravo" groups="pdk" />
+  <project path="hardware/libhardware" name="platform_hardware_libhardware" remote="justremotephone" revision="android-5.1-bravo" groups="pdk" />
+  <project path="hardware/ril" name="android_hardware_ril" remote="justremotephone" revision="android-5.1-bravo" groups="pdk" />
+  <project path="hardware/broadcom/libbt" name="android_hardware_broadcom_libbt" remote="justremotephone" revision="android-5.1-bravo" groups="pdk" />
+  <project path="system/netd" name="android_system_netd" remote="justremotephone" revision="android-5.1-bravo" groups="pdk" />
+
+  <project name="android_device_htc_bravo" path="device/htc/bravo" remote="justremotephone" revision="android-5.1-bravo"/>
+  <project name="android_device_htc_qsd8k-common" path="device/htc/qsd8k-common" remote="justremotephone" revision="android-5.1-bravo"/>
+
+  <project name="android_hardware_qcom_display-legacy" path="hardware/qcom/display-legacy" remote="justremotephone" revision="android-5.1-bravo"/>
+  <project name="android_hardware_qcom_gps-legacy" path="hardware/qcom/gps-legacy" remote="justremotephone" revision="android-5.1-bravo"/>
+  <project name="android_hardware_qcom_media-legacy" path="hardware/qcom/media-legacy" remote="justremotephone" revision="android-5.1-bravo"/>
+  <project name="android_hardware_qcom_audio-caf" path="hardware/qcom/audio-caf/msm8960" remote="justremotephone" revision="android-5.1-bravo"/>
+
+  <project name="android_kernel_htc_qsd8k" path="kernel/htc/qsd8k" remote="justremotephone" revision="android-5.1-bravo"/>
+
+  <project path="vendor/ev" name="android_vendor_ev" groups="ev-extra" remote="justremotephone" revision="android-5.1-bravo"/>
+  <project name="android_vendor_htc" path="vendor/htc" remote="justremotephone" revision="android-5.1-bravo"/>
+
+
   <project path="abi/cpp" name="platform/abi/cpp" groups="pdk" />
   <project path="art" name="platform/art" groups="pdk" />
-  <project path="bionic" name="platform/bionic" groups="pdk" />
   <project path="bootable/bootloader/legacy" name="platform/bootable/bootloader/legacy" groups="pdk-cw-fs" />
-  <project path="bootable/recovery" name="platform/bootable/recovery" groups="pdk" />
   <project path="cts" name="platform/cts" groups="cts,pdk-cw-fs" />
   <project path="dalvik" name="platform/dalvik" groups="pdk-cw-fs" />
   <project path="developers/build" name="platform/developers/build" />
@@ -292,7 +317,6 @@
   <project path="frameworks/minikin" name="platform/frameworks/minikin" groups="pdk-cw-fs" />
   <project path="frameworks/ml" name="platform/frameworks/ml" groups="pdk-cw-fs" />
   <project path="frameworks/multidex" name="platform/frameworks/multidex" groups="pdk-cw-fs" />
-  <project path="frameworks/native" name="platform/frameworks/native" groups="pdk" />
   <project path="frameworks/opt/bitmap" name="platform/frameworks/opt/bitmap" />
   <project path="frameworks/opt/bluetooth" name="platform/frameworks/opt/bluetooth" groups="pdk-cw-fs" />
   <project path="frameworks/opt/calendar" name="platform/frameworks/opt/calendar" groups="pdk-cw-fs" />
@@ -305,11 +329,9 @@
   <project path="frameworks/opt/mms" name="platform/frameworks/opt/mms" groups="pdk-cw-fs" />
   <project path="frameworks/opt/net/ims" name="platform/frameworks/opt/net/ims" groups="frameworks_ims,pdk-cw-fs" />
   <project path="frameworks/opt/net/voip" name="platform/frameworks/opt/net/voip" groups="pdk-cw-fs" />
-  <project path="frameworks/opt/net/wifi" name="platform/frameworks/opt/net/wifi" groups="pdk" />
   <project path="frameworks/opt/net/ethernet" name="platform/frameworks/opt/net/ethernet" />
   <project path="frameworks/opt/photoviewer" name="platform/frameworks/opt/photoviewer" groups="pdk-cw-fs" />
   <project path="frameworks/opt/setupwizard" name="platform/frameworks/opt/setupwizard" groups="pdk-cw-fs" />
-  <project path="frameworks/opt/telephony" name="platform/frameworks/opt/telephony" groups="pdk" />
   <project path="frameworks/opt/timezonepicker" name="platform/frameworks/opt/timezonepicker" groups="pdk-cw-fs" />
   <project path="frameworks/opt/vcard" name="platform/frameworks/opt/vcard" groups="pdk-cw-fs" />
   <project path="frameworks/opt/widget" name="platform/frameworks/opt/widget" groups="pdk-cw-fs" />
@@ -319,7 +341,6 @@
   <project path="frameworks/webview" name="platform/frameworks/webview" groups="pdk-cw-fs" />
   <project path="frameworks/wilhelm" name="platform/frameworks/wilhelm" groups="pdk-cw-fs" />
   <project path="hardware/akm" name="platform/hardware/akm" />
-  <project path="hardware/broadcom/libbt" name="platform/hardware/broadcom/libbt" groups="pdk" />
   <project path="hardware/broadcom/wlan" name="platform/hardware/broadcom/wlan" groups="broadcom_wlan" />
   <project path="hardware/intel/audio_media" name="platform/hardware/intel/audio_media" groups="intel" />
   <project path="hardware/intel/bootstub" name="platform/hardware/intel/bootstub" groups="intel" />
@@ -336,14 +357,12 @@
   <project path="hardware/intel/img/psb_headers" name="platform/hardware/intel/img/psb_headers" groups="intel" />
   <project path="hardware/intel/img/psb_video" name="platform/hardware/intel/img/psb_video" groups="intel" />
   <project path="hardware/invensense" name="platform/hardware/invensense" groups="invensense" />
-  <project path="hardware/libhardware" name="platform/hardware/libhardware" groups="pdk" />
   <project path="hardware/libhardware_legacy" name="platform/hardware/libhardware_legacy" groups="pdk" />
   <project path="hardware/nvidia/audio" name="platform/hardware/nvidia/audio" groups="nvidia_audio" />
   <project path="hardware/nvidia/tegra124" name="platform/hardware/nvidia/tegra124" groups="tegra124" />
   <project path="hardware/qcom/audio" name="platform/hardware/qcom/audio" groups="qcom,qcom_audio" />
   <project path="hardware/qcom/bt" name="platform/hardware/qcom/bt" groups="qcom" />
   <project path="hardware/qcom/display" name="platform/hardware/qcom/display" groups="qcom,qcom_display" />
-  <project path="hardware/qcom/gps" name="platform/hardware/qcom/gps" groups="qcom,qcom_gps" />
   <project path="hardware/qcom/keymaster" name="platform/hardware/qcom/keymaster" groups="qcom" />
   <project path="hardware/qcom/media" name="platform/hardware/qcom/media" groups="qcom" />
   <project path="hardware/qcom/msm8960" name="platform/hardware/qcom/msm8960" groups="qcom_msm8960" />
@@ -354,7 +373,6 @@
   <project path="hardware/qcom/power" name="platform/hardware/qcom/power" groups="qcom" />
   <project path="hardware/qcom/sensors" name="platform/hardware/qcom/sensors" groups="qcom" />
   <project path="hardware/qcom/wlan" name="platform/hardware/qcom/wlan" groups="qcom_wlan" />
-  <project path="hardware/ril" name="platform/hardware/ril" groups="pdk" />
   <project path="hardware/samsung_slsi/exynos5" name="platform/hardware/samsung_slsi/exynos5" groups="exynos5" />
   <project path="hardware/ti/omap3" name="platform/hardware/ti/omap3" groups="omap3" />
   <project path="hardware/ti/omap4-aah" name="platform/hardware/ti/omap4-aah" groups="omap4-aah" />
@@ -493,7 +511,6 @@
   <project path="system/extras" name="platform/system/extras" groups="pdk" />
   <project path="system/keymaster" name="platform/system/keymaster" groups="pdk" />
   <project path="system/media" name="platform/system/media" groups="pdk" />
-  <project path="system/netd" name="platform/system/netd" groups="pdk" />
   <project path="system/security" name="platform/system/security" groups="pdk" />
   <project path="system/vold" name="platform/system/vold" groups="pdk" />
   <project path="tools/adt/eclipse" name="platform/tools/adt/eclipse" groups="notdefault,tools" />
