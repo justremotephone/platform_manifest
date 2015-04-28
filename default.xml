@@ -23,15 +23,15 @@
   <project path="hardware/broadcom/libbt" name="android_hardware_broadcom_libbt" remote="justremotephone" revision="android-5.1-bravo" groups="pdk" />
   <project path="system/netd" name="android_system_netd" remote="justremotephone" revision="android-5.1-bravo" groups="pdk" />
 
-  <project name="android_device_htc_bravo" path="device/htc/bravo" remote="justremotephone" revision="android-5.1-bravo"/>
-  <project name="android_device_htc_qsd8k-common" path="device/htc/qsd8k-common" remote="justremotephone" revision="android-5.1-bravo"/>
+  <project name="android_device_htc_bravo" path="device/htc/bravo" remote="justremotephone" revision="android-5.1-bravo-30"/>
+  <project name="android_device_htc_qsd8k-common" path="device/htc/qsd8k-common" remote="justremotephone" revision="android-5.1-bravo-30"/>
 
   <project name="android_hardware_qcom_display-legacy" path="hardware/qcom/display-legacy" remote="justremotephone" revision="android-5.1-bravo"/>
   <project name="android_hardware_qcom_gps-legacy" path="hardware/qcom/gps-legacy" remote="justremotephone" revision="android-5.1-bravo"/>
   <project name="android_hardware_qcom_media-legacy" path="hardware/qcom/media-legacy" remote="justremotephone" revision="android-5.1-bravo"/>
   <project name="android_hardware_qcom_audio-caf" path="hardware/qcom/audio-caf/msm8960" remote="justremotephone" revision="android-5.1-bravo"/>
 
-  <project name="android_kernel_htc_qsd8k" path="kernel/htc/qsd8k" remote="justremotephone" revision="android-5.1-bravo"/>
+  <project name="android_kernel_htc_qsd8k" path="kernel/htc/qsd8k" remote="justremotephone" revision="android-5.1-bravo-30"/>
 
   <project path="vendor/ev" name="android_vendor_ev" groups="ev-extra" remote="justremotephone" revision="android-5.1-bravo"/>
   <project name="android_vendor_htc" path="vendor/htc" remote="justremotephone" revision="android-5.1-bravo"/>
