@@ -11,32 +11,32 @@
            remote="aosp"
            sync-j="4" />
 
-  <project path="build" name="android_build" groups="ev-aosp" remote="justremotephone" revision="lollipop-bravo">
+  <project path="build" name="android_build" groups="ev-aosp" remote="justremotephone" revision="android-5.0-bravo">
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
-  <project path="bionic" name="android_bionic" groups="pdk" remote="justremotephone" revision="lollipop-bravo"/>
-  <project path="bootable/recovery" name="android_bootable_recovery" remote="justremotephone" revision="lollipop-bravo" groups="pdk" />
-  <project path="external/chromium_org" name="android_external_chromium_org" remote="justremotephone" revision="lollipop-bravo"/>
-  <project path="frameworks/native" name="android_platform_frameworks_native" remote="justremotephone" revision="lollipop-bravo" groups="pdk" />
-  <project path="frameworks/opt/net/wifi" name="android_frameworks_opt_net_wifi" remote="justremotephone" revision="lollipop-bravo" groups="pdk" />
-  <project path="frameworks/opt/telephony" name="android_frameworks_opt_telephony" remote="justremotephone" revision="lollipop-bravo" groups="pdk" />
-  <project path="hardware/libhardware" name="platform_hardware_libhardware" remote="justremotephone" revision="lollipop-bravo" groups="pdk" />
-  <project path="hardware/ril" name="android_hardware_ril" remote="justremotephone" revision="lollipop-bravo" groups="pdk" />
-  <project path="hardware/broadcom/libbt" name="android_hardware_broadcom_libbt" remote="justremotephone" revision="lollipop-bravo" groups="pdk" />
-  <project path="system/netd" name="android_system_netd" remote="justremotephone" revision="lollipop-bravo" groups="pdk" />
+  <project path="bionic" name="android_bionic" groups="pdk" remote="justremotephone" revision="android-5.0-bravo"/>
+  <project path="bootable/recovery" name="android_bootable_recovery" remote="justremotephone" revision="android-5.0-bravo" groups="pdk" />
+  <project path="external/chromium_org" name="android_external_chromium_org" remote="justremotephone" revision="android-5.0-bravo"/>
+  <project path="frameworks/native" name="android_platform_frameworks_native" remote="justremotephone" revision="android-5.0-bravo" groups="pdk" />
+  <project path="frameworks/opt/net/wifi" name="android_frameworks_opt_net_wifi" remote="justremotephone" revision="android-5.0-bravo" groups="pdk" />
+  <project path="frameworks/opt/telephony" name="android_frameworks_opt_telephony" remote="justremotephone" revision="android-5.0-bravo" groups="pdk" />
+  <project path="hardware/libhardware" name="platform_hardware_libhardware" remote="justremotephone" revision="android-5.0-bravo" groups="pdk" />
+  <project path="hardware/ril" name="android_hardware_ril" remote="justremotephone" revision="android-5.0-bravo" groups="pdk" />
+  <project path="hardware/broadcom/libbt" name="android_hardware_broadcom_libbt" remote="justremotephone" revision="android-5.0-bravo" groups="pdk" />
+  <project path="system/netd" name="android_system_netd" remote="justremotephone" revision="android-5.0-bravo" groups="pdk" />
 
-  <project name="android_device_htc_bravo" path="device/htc/bravo" remote="justremotephone" revision="lollipop-bravo"/>
-  <project name="android_device_htc_qsd8k-common" path="device/htc/qsd8k-common" remote="justremotephone" revision="lollipop-bravo"/>
+  <project name="android_device_htc_bravo" path="device/htc/bravo" remote="justremotephone" revision="android-5.0-bravo"/>
+  <project name="android_device_htc_qsd8k-common" path="device/htc/qsd8k-common" remote="justremotephone" revision="android-5.0-bravo"/>
 
-  <project name="android_hardware_qcom_display-legacy" path="hardware/qcom/display-legacy" remote="justremotephone" revision="lollipop-bravo"/>
-  <project name="android_hardware_qcom_gps-legacy" path="hardware/qcom/gps-legacy" remote="justremotephone" revision="lollipop-bravo"/>
-  <project name="android_hardware_qcom_media-legacy" path="hardware/qcom/media-legacy" remote="justremotephone" revision="lollipop-bravo"/>
-  <project name="android_hardware_qcom_audio-caf" path="hardware/qcom/audio-caf/msm8960" remote="justremotephone" revision="lollipop-bravo"/>
+  <project name="android_hardware_qcom_display-legacy" path="hardware/qcom/display-legacy" remote="justremotephone" revision="android-5.0-bravo"/>
+  <project name="android_hardware_qcom_gps-legacy" path="hardware/qcom/gps-legacy" remote="justremotephone" revision="android-5.0-bravo"/>
+  <project name="android_hardware_qcom_media-legacy" path="hardware/qcom/media-legacy" remote="justremotephone" revision="android-5.0-bravo"/>
+  <project name="android_hardware_qcom_audio-caf" path="hardware/qcom/audio-caf/msm8960" remote="justremotephone" revision="android-5.0-bravo"/>
 
-  <project name="android_kernel_htc_qsd8k" path="kernel/htc/qsd8k" remote="justremotephone" revision="lollipop-bravo"/>
+  <project name="android_kernel_htc_qsd8k" path="kernel/htc/qsd8k" remote="justremotephone" revision="android-5.0-bravo"/>
 
-  <project path="vendor/ev" name="android_vendor_ev" groups="ev-extra" remote="justremotephone" revision="lollipop-bravo"/>
-  <project name="android_vendor_htc" path="vendor/htc" remote="justremotephone" revision="lollipop-bravo"/>
+  <project path="vendor/ev" name="android_vendor_ev" groups="ev-extra" remote="justremotephone" revision="android-5.0-bravo"/>
+  <project name="android_vendor_htc" path="vendor/htc" remote="justremotephone" revision="android-5.0-bravo"/>
 
 
   <project path="abi/cpp" name="platform/abi/cpp" groups="pdk" />
