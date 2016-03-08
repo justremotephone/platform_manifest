@@ -2,17 +2,42 @@
 <manifest>
 
   <remote  name="aosp"
-           fetch=".." />
+           fetch="https://android.googlesource.com/" />
+
+  <remote name="github"
+           fetch="https://github.com/" />
+
   <default revision="refs/tags/android-6.0.1_r22"
            remote="aosp"
            sync-j="4" />
 
-  <project path="build" name="platform/build" groups="pdk" >
+  <project path="build" name="justremotephone/platform_build" groups="pdk" remote="github" revision="jf" >
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
+  <project path="bionic" name="justremotephone/android_bionic" groups="pdk" remote="github" revision="jf"/>
+
+  <project path="frameworks/native" name="justremotephone/android_platform_frameworks_native" groups="pdk" remote="github" revision="jf" />
+  <project path="hardware/broadcom/libbt" name="justremotephone/android_hardware_broadcom_libbt" groups="pdk" remote="github" revision="jf" />
+  <project path="system/core" name="justremotephone/platform_system_core" groups="pdk" remote="github" revision="jf" />
+
+  <project path="hardware/qcom/audio-caf/msm8960" name="justremotephone/android_hardware_qcom_audio-caf" groups="qcom,qcom_audio" remote="github" revision="jf" />
+  <project path="hardware/qcom/display-caf/msm8960" name="justremotephone/android_hardware_qcom_display" groups="pdk,qcom,qcom_display" remote="github" revision="jf" />
+  <project path="hardware/qcom/keymaster" name="justremotephone/platform_hardware_qcom_keymaster" groups="qcom,qcom_keymaster" remote="github" revision="jf" />
+  <project path="hardware/qcom/media-caf/msm8960" name="justremotephone/android_hardware_qcom_media" groups="qcom" remote="github" revision="jf" />	
+  <project path="hardware/samsung" name="justremotephone/android_hardware_samsung" remote="github" revision="jf" />
+
+  <project path="device/qcom/sepolicy" name="justremotephone/platform_device_qcom_sepolicy" remote="github" revision="jf" />
+  <project path="device/samsung/jflte" name="justremotephone/platform_device_samsung_jflte" remote="github" revision="jf" />
+  <project path="device/samsung/qcom-common" name="justremotephone/android_device_samsung_qcom-common" remote="github" revision="jf" />
+  <project path="kernel/samsung/jf" name="justremotephone/android_kernel_samsung_jf" remote="github" revision="jf" />
+
+  <project path="vendor/aosp" name="justremotephone/platform_vendor_aosp" remote="github" revision="jf" />
+  <project path="vendor/samsung" name="justremotephone/proprietary_vendor_samsung" remote="github" revision="jf" />
+
+
+
   <project path="abi/cpp" name="platform/abi/cpp" groups="pdk" />
   <project path="art" name="platform/art" groups="pdk" />
-  <project path="bionic" name="platform/bionic" groups="pdk" />
   <project path="bootable/recovery" name="platform/bootable/recovery" groups="pdk" />
   <project path="cts" name="platform/cts" groups="cts,pdk-cw-fs,pdk-fs" />
   <project path="dalvik" name="platform/dalvik" groups="pdk-cw-fs,pdk-fs" />
@@ -21,14 +46,7 @@
   <project path="developers/docs" name="platform/developers/docs" />
   <project path="developers/samples/android" name="platform/developers/samples/android" />
   <project path="development" name="platform/development" groups="pdk-cw-fs,pdk-fs" />
-  <project path="device/asus/deb" name="device/asus/deb" groups="device,flo" />
-  <project path="device/asus/flo" name="device/asus/flo" groups="device,flo" />
-  <project path="device/asus/flo-kernel" name="device/asus/flo-kernel" groups="device,flo" clone-depth="1" />
-  <project path="device/asus/fugu" name="device/asus/fugu" groups="device,fugu,broadcom_pdk" />
-  <project path="device/asus/fugu-kernel" name="device/asus/fugu-kernel" groups="device,fugu,broadcom_pdk" clone-depth="1" />
   <project path="device/common" name="device/common" groups="pdk-cw-fs,pdk-fs" />
-  <project path="device/lge/bullhead" name="device/lge/bullhead" groups="device,bullhead" />
-  <project path="device/lge/bullhead-kernel" name="device/lge/bullhead-kernel" groups="device,bullhead" />
   <project path="device/generic/arm64" name="device/generic/arm64" groups="pdk" />
   <project path="device/generic/armv7-a-neon" name="device/generic/armv7-a-neon" groups="pdk" />
   <project path="device/generic/common" name="device/generic/common" groups="pdk" />
@@ -45,14 +63,6 @@
   <project path="device/google/accessory/arduino" name="device/google/accessory/arduino" groups="device" />
   <project path="device/google/accessory/demokit" name="device/google/accessory/demokit" groups="device" />
   <project path="device/google/atv" name="device/google/atv" groups="device,fugu,broadcom_pdk,generic_fs" />
-  <project path="device/htc/flounder" name="device/htc/flounder" groups="device,flounder,broadcom_pdk" />
-  <project path="device/htc/flounder-kernel" name="device/htc/flounder-kernel" groups="device,flounder,broadcom_pdk" clone-depth="1" />
-  <project path="device/huawei/angler" name="device/huawei/angler" groups="device,angler,broadcom_pdk" />
-  <project path="device/huawei/angler-kernel" name="device/huawei/angler-kernel" groups="device,angler,broadcom_pdk" />
-  <project path="device/lge/hammerhead" name="device/lge/hammerhead" groups="device,hammerhead,broadcom_pdk,generic_fs" />
-  <project path="device/lge/hammerhead-kernel" name="device/lge/hammerhead-kernel" groups="device,hammerhead,broadcom_pdk,generic_fs" clone-depth="1" />
-  <project path="device/moto/shamu" name="device/moto/shamu" groups="device,shamu,broadcom_pdk" />
-  <project path="device/moto/shamu-kernel" name="device/moto/shamu-kernel" groups="device,shamu,broadcom_pdk" clone-depth="1" />
   <project path="device/sample" name="device/sample" groups="pdk" />
   <project path="docs/source.android.com" name="platform/docs/source.android.com" groups="pdk-cw-fs,pdk-fs" />
   <project path="external/aac" name="platform/external/aac" groups="pdk" />
@@ -273,7 +283,6 @@
   <project path="frameworks/minikin" name="platform/frameworks/minikin" groups="pdk-cw-fs,pdk-fs" />
   <project path="frameworks/ml" name="platform/frameworks/ml" groups="pdk-cw-fs,pdk-fs" />
   <project path="frameworks/multidex" name="platform/frameworks/multidex" groups="pdk-cw-fs,pdk-fs" />
-  <project path="frameworks/native" name="platform/frameworks/native" groups="pdk" />
   <project path="frameworks/opt/bitmap" name="platform/frameworks/opt/bitmap" groups="pdk-fs" />
   <project path="frameworks/opt/bluetooth" name="platform/frameworks/opt/bluetooth" groups="pdk-cw-fs,pdk-fs" />
   <project path="frameworks/opt/calendar" name="platform/frameworks/opt/calendar" groups="pdk-cw-fs,pdk-fs" />
@@ -301,7 +310,6 @@
   <project path="frameworks/webview" name="platform/frameworks/webview" groups="pdk-cw-fs,pdk-fs" />
   <project path="frameworks/wilhelm" name="platform/frameworks/wilhelm" groups="pdk-cw-fs,pdk-fs" />
   <project path="hardware/akm" name="platform/hardware/akm" />
-  <project path="hardware/broadcom/libbt" name="platform/hardware/broadcom/libbt" groups="pdk" />
   <project path="hardware/broadcom/wlan" name="platform/hardware/broadcom/wlan" groups="pdk,broadcom_wlan" />
   <project path="hardware/intel/audio_media" name="platform/hardware/intel/audio_media" groups="intel" />
   <project path="hardware/intel/bootstub" name="platform/hardware/intel/bootstub" groups="intel" />
@@ -323,15 +331,10 @@
   <project path="hardware/marvell/bt" name="platform/hardware/marvell/bt" groups="marvell_bt" />
   <project path="hardware/mediatek" name="platform/hardware/mediatek" groups="mediatek,mediatek_wear" />
   <project path="hardware/nvidia/audio" name="platform/hardware/nvidia/audio" groups="nvidia_audio" />
-  <project path="hardware/qcom/audio" name="platform/hardware/qcom/audio" groups="qcom,qcom_audio" />
   <project path="hardware/qcom/bt" name="platform/hardware/qcom/bt" groups="qcom" />
   <project path="hardware/qcom/camera" name="platform/hardware/qcom/camera" groups="qcom" />
-  <project path="hardware/qcom/display" name="platform/hardware/qcom/display" groups="pdk,qcom,qcom_display" />
   <project path="hardware/qcom/gps" name="platform/hardware/qcom/gps" groups="qcom,qcom_gps" />
-  <project path="hardware/qcom/keymaster" name="platform/hardware/qcom/keymaster" groups="qcom,qcom_keymaster" />
-  <project path="hardware/qcom/media" name="platform/hardware/qcom/media" groups="qcom" />
   <project path="hardware/qcom/msm8960" name="platform/hardware/qcom/msm8960" groups="qcom_msm8960" />
-  <project path="hardware/qcom/msm8994" name="platform/hardware/qcom/msm8994" groups="qcom_msm8994" />
   <project path="hardware/qcom/msm8x26" name="platform/hardware/qcom/msm8x26" groups="qcom_msm8x26" />
   <project path="hardware/qcom/msm8x27" name="platform/hardware/qcom/msm8x27" groups="qcom_msm8x27" />
   <project path="hardware/qcom/msm8x74" name="platform/hardware/qcom/msm8x74" groups="pdk,qcom_msm8x74" />
@@ -456,7 +459,6 @@
   <project path="prebuilts/tools" name="platform/prebuilts/tools" groups="pdk,tools" />
   <project path="sdk" name="platform/sdk" groups="pdk-cw-fs,pdk-fs" />
   <project path="system/bt" name="platform/system/bt" groups="pdk" />
-  <project path="system/core" name="platform/system/core" groups="pdk" />
   <project path="system/extras" name="platform/system/extras" groups="pdk" />
   <project path="system/gatekeeper" name="platform/system/gatekeeper" groups="pdk" />
   <project path="system/keymaster" name="platform/system/keymaster" groups="pdk" />
