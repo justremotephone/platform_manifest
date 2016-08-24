@@ -7,7 +7,7 @@
   <remote name="github"
            fetch="https://github.com/" />
 
-  <default revision="refs/tags/android-6.0.1_r22"
+  <default revision="refs/tags/android-6.0.1_r24"
            remote="aosp"
            sync-j="4" />
 
@@ -33,6 +33,11 @@
 
   <project path="vendor/aosp" name="justremotephone/platform_vendor_aosp" remote="github" revision="jf" />
   <project path="vendor/samsung" name="justremotephone/proprietary_vendor_samsung" remote="github" revision="jf" />
+
+  <project path="vendor/google/build" name="justremotephone/aosp_build" remote="github" revision="jf-n-preview1" />
+  <project path="vendor/opengapps/sources/all" name="opengapps/all" revision="master" remote="github" />
+<!-- If you need other/additional targets, follow the same template: -->
+<project path="vendor/opengapps/sources/arm" name="opengapps/arm" revision="master" remote="github" />
 
 
 
