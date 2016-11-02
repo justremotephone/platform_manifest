@@ -11,34 +11,30 @@
            remote="aosp"
            sync-j="4" />
 
-  <project path="build" name="justremotephone/platform_build" groups="pdk" remote="github" revision="jf" >
+  <project path="build" name="justremotephone/platform_build" groups="pdk" remote="github" revision="jf7" >
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
-  <project path="bionic" name="justremotephone/android_bionic" groups="pdk" remote="github" revision="jf"/>
+  <project path="bionic" name="justremotephone/android_bionic" groups="pdk" remote="github" revision="jf7"/>
 
-  <project path="frameworks/native" name="justremotephone/android_platform_frameworks_native" groups="pdk" remote="github" revision="jf" />
-  <project path="hardware/broadcom/libbt" name="justremotephone/android_hardware_broadcom_libbt" groups="pdk" remote="github" revision="jf" />
-  <project path="system/core" name="justremotephone/platform_system_core" groups="pdk" remote="github" revision="jf" />
+  <project path="hardware/broadcom/libbt" name="justremotephone/android_hardware_broadcom_libbt" groups="pdk" remote="github" revision="jf7" />
 
-  <project path="hardware/qcom/audio-caf/msm8960" name="justremotephone/android_hardware_qcom_audio-caf" groups="qcom,qcom_audio" remote="github" revision="jf" />
-  <project path="hardware/qcom/display-caf/msm8960" name="justremotephone/android_hardware_qcom_display" groups="pdk,qcom,qcom_display" remote="github" revision="jf" />
-  <project path="hardware/qcom/keymaster" name="justremotephone/platform_hardware_qcom_keymaster" groups="qcom,qcom_keymaster" remote="github" revision="jf" />
-  <project path="hardware/qcom/media-caf/msm8960" name="justremotephone/android_hardware_qcom_media" groups="qcom" remote="github" revision="jf" />	
-  <project path="hardware/samsung" name="justremotephone/android_hardware_samsung" remote="github" revision="jf" />
+  <project path="hardware/qcom/audio-caf/msm8960" name="justremotephone/android_hardware_qcom_audio-caf" groups="qcom,qcom_audio" remote="github" revision="jf7" />
+  <project path="hardware/qcom/display-caf/msm8960" name="justremotephone/android_hardware_qcom_display" groups="pdk,qcom,qcom_display" remote="github" revision="jf7" />
+  <project path="hardware/qcom/keymaster" name="justremotephone/platform_hardware_qcom_keymaster" groups="qcom,qcom_keymaster" remote="github" revision="jf7" />
+  <project path="hardware/qcom/media-caf/msm8960" name="justremotephone/android_hardware_qcom_media" groups="qcom" remote="github" revision="jf7" />	
+  <project path="hardware/samsung" name="justremotephone/android_hardware_samsung" remote="github" revision="jf7" />
 
-  <project path="device/qcom/sepolicy" name="justremotephone/platform_device_qcom_sepolicy" remote="github" revision="jf" />
-  <project path="device/samsung/jflte" name="justremotephone/platform_device_samsung_jflte" remote="github" revision="jf" />
-  <project path="device/samsung/qcom-common" name="justremotephone/android_device_samsung_qcom-common" remote="github" revision="jf" />
-  <project path="kernel/samsung/jf" name="justremotephone/android_kernel_samsung_jf" remote="github" revision="jf" />
+  <project path="device/qcom/sepolicy" name="justremotephone/platform_device_qcom_sepolicy" remote="github" revision="jf7" />
+  <project path="device/samsung/jflte" name="justremotephone/platform_device_samsung_jflte" remote="github" revision="jf7" />
+  <project path="device/samsung/qcom-common" name="justremotephone/android_device_samsung_qcom-common" remote="github" revision="jf7" />
+  <project path="kernel/samsung/jf" name="justremotephone/android_kernel_samsung_jf" remote="github" revision="jf7" />
 
-  <project path="vendor/aosp" name="justremotephone/platform_vendor_aosp" remote="github" revision="jf" />
-  <project path="vendor/samsung" name="justremotephone/proprietary_vendor_samsung" remote="github" revision="jf" />
+  <project path="vendor/aosp" name="justremotephone/platform_vendor_aosp" remote="github" revision="jf7" />
+  <project path="vendor/samsung" name="justremotephone/proprietary_vendor_samsung" remote="github" revision="jf7" />
 
-  <project path="vendor/google/build" name="justremotephone/aosp_build" remote="github" revision="jf-n-preview1" />
-  <project path="vendor/opengapps/sources/all" name="opengapps/all" revision="master" remote="github" />
-<!-- If you need other/additional targets, follow the same template: -->
-<project path="vendor/opengapps/sources/arm" name="opengapps/arm" revision="master" remote="github" />
-
+  <project path="vendor/google/build" name="justremotephone/aosp_build" remote="github" revision="jf7" /> 
+  <project path="vendor/opengapps/sources/all" name="justremotephone/all" clone-depth="1" remote="github" revision="jf7" />
+  <project path="vendor/opengapps/sources/arm" name="justremotephone/arm" clone-depth="1" remote="github" revision="jf7" />
 
 
   <project path="build/blueprint" name="platform/build/blueprint" groups="pdk,tradefed" />
@@ -329,6 +325,7 @@
   <project path="frameworks/ex" name="platform/frameworks/ex" groups="pdk-cw-fs,pdk-fs" />
   <project path="frameworks/minikin" name="platform/frameworks/minikin" groups="pdk-cw-fs,pdk-fs" />
   <project path="frameworks/ml" name="platform/frameworks/ml" groups="pdk-cw-fs,pdk-fs" />
+  <project path="frameworks/native" name="platform/frameworks/native" groups="pdk" />
   <project path="frameworks/multidex" name="platform/frameworks/multidex" groups="pdk-cw-fs,pdk-fs" />
   <project path="frameworks/opt/bitmap" name="platform/frameworks/opt/bitmap" groups="pdk-fs" />
   <project path="frameworks/opt/bluetooth" name="platform/frameworks/opt/bluetooth" groups="pdk-cw-fs,pdk-fs" />
@@ -509,6 +506,7 @@
   <project path="system/connectivity/apmanager" name="platform/system/connectivity/apmanager" />
   <project path="system/connectivity/dhcp_client" name="platform/system/connectivity/dhcp_client" />
   <project path="system/connectivity/shill" name="platform/system/connectivity/shill" />
+  <project path="system/core" name="platform/system/core" groups="pdk" />
   <project path="system/extras" name="platform/system/extras" groups="pdk" />
   <project path="system/firewalld" name="platform/system/firewalld" />
   <project path="system/gatekeeper" name="platform/system/gatekeeper" groups="pdk" />
