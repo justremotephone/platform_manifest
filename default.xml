@@ -7,34 +7,34 @@
   <remote name="github"
            fetch="https://github.com/" />
 
-  <default revision="refs/tags/android-7.1.0_r4"
+  <default revision="refs/tags/android-7.1.2_r17"
            remote="aosp"
            sync-j="4" />
 
-  <project path="build" name="justremotephone/platform_build" groups="pdk" remote="github" revision="jf71" >
+  <project path="build" name="justremotephone/platform_build" groups="pdk" remote="github" revision="jf712" >
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
-  <project path="bionic" name="justremotephone/android_bionic" groups="pdk" remote="github" revision="jf71"/>
+  <project path="bionic" name="justremotephone/android_bionic" groups="pdk" remote="github" revision="jf712"/>
 
-  <project path="hardware/broadcom/libbt" name="justremotephone/android_hardware_broadcom_libbt" groups="pdk" remote="github" revision="jf71" />
+  <project path="hardware/broadcom/libbt" name="justremotephone/android_hardware_broadcom_libbt" groups="pdk" remote="github" revision="jf712" />
 
-  <project path="hardware/qcom/audio-caf/msm8960" name="justremotephone/android_hardware_qcom_audio-caf" groups="qcom,qcom_audio" remote="github" revision="jf71" />
-  <project path="hardware/qcom/display-caf/msm8960" name="justremotephone/android_hardware_qcom_display" groups="pdk,qcom,qcom_display" remote="github" revision="jf71" />
-  <project path="hardware/qcom/keymaster" name="justremotephone/platform_hardware_qcom_keymaster" groups="qcom,qcom_keymaster" remote="github" revision="jf71" />
-  <project path="hardware/qcom/media-caf/msm8960" name="justremotephone/android_hardware_qcom_media" groups="qcom" remote="github" revision="jf71" />	
-  <project path="hardware/samsung" name="justremotephone/android_hardware_samsung" remote="github" revision="jf71" />
+  <project path="hardware/qcom/audio-caf/msm8960" name="justremotephone/android_hardware_qcom_audio-caf" groups="qcom,qcom_audio" remote="github" revision="jf712" />
+  <project path="hardware/qcom/display-caf/msm8960" name="justremotephone/android_hardware_qcom_display" groups="pdk,qcom,qcom_display" remote="github" revision="jf712" />
+  <project path="hardware/qcom/keymaster" name="justremotephone/platform_hardware_qcom_keymaster" groups="qcom,qcom_keymaster" remote="github" revision="jf712" />
+  <project path="hardware/qcom/media-caf/msm8960" name="justremotephone/android_hardware_qcom_media" groups="qcom" remote="github" revision="jf712" />	
+  <project path="hardware/samsung" name="justremotephone/android_hardware_samsung" remote="github" revision="jf712" />
 
-  <project path="device/qcom/sepolicy" name="justremotephone/platform_device_qcom_sepolicy" remote="github" revision="jf71" />
-  <project path="device/samsung/jflte" name="justremotephone/platform_device_samsung_jflte" remote="github" revision="jf71" />
-  <project path="device/samsung/qcom-common" name="justremotephone/android_device_samsung_qcom-common" remote="github" revision="jf71" />
-  <project path="kernel/samsung/jf" name="justremotephone/android_kernel_samsung_jf" remote="github" revision="jf71" />
+  <project path="device/qcom/sepolicy" name="justremotephone/platform_device_qcom_sepolicy" remote="github" revision="jf712" />
+  <project path="device/samsung/jflte" name="justremotephone/platform_device_samsung_jflte" remote="github" revision="jf712" />
+  <project path="device/samsung/qcom-common" name="justremotephone/android_device_samsung_qcom-common" remote="github" revision="jf712" />
+  <project path="kernel/samsung/jf" name="justremotephone/android_kernel_samsung_jf" remote="github" revision="jf712" />
 
-  <project path="vendor/aosp" name="justremotephone/platform_vendor_aosp" remote="github" revision="jf71" />
-  <project path="vendor/samsung" name="justremotephone/proprietary_vendor_samsung" remote="github" revision="jf71" />
+  <project path="vendor/aosp" name="justremotephone/platform_vendor_aosp" remote="github" revision="jf712" />
+  <project path="vendor/samsung" name="justremotephone/proprietary_vendor_samsung" remote="github" revision="jf712" />
 
-  <project path="vendor/google/build" name="justremotephone/aosp_build" remote="github" revision="jf71" /> 
-  <project path="vendor/opengapps/sources/all" name="justremotephone/all" clone-depth="1" remote="github" revision="jf71" />
-  <project path="vendor/opengapps/sources/arm" name="justremotephone/arm" clone-depth="1" remote="github" revision="jf71" />
+  <project path="vendor/google/build" name="justremotephone/aosp_build" remote="github" revision="jf712" /> 
+  <project path="vendor/opengapps/sources/all" name="justremotephone/all" clone-depth="1" remote="github" revision="jf712" />
+  <project path="vendor/opengapps/sources/arm" name="justremotephone/arm" clone-depth="1" remote="github" revision="jf712" />
 
 
   <project path="build/blueprint" name="platform/build/blueprint" groups="pdk,tradefed" />
