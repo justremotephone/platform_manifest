@@ -50,9 +50,9 @@
   <project path="vendor/aosp" name="justremotephone/platform_vendor_aosp" remote="github" revision="jf8" />
   <project path="vendor/samsung" name="justremotephone/proprietary_vendor_samsung" remote="github" revision="jf8" />
 
-  <project path="vendor/google/build" name="justremotephone/aosp_build" remote="github" revision="jf71" /> 
-  <project path="vendor/opengapps/sources/all" name="justremotephone/all" clone-depth="1" remote="github" revision="jf71" />
-  <project path="vendor/opengapps/sources/arm" name="justremotephone/arm" clone-depth="1" remote="github" revision="jf71" />
+  <project path="vendor/opengapps/build" name="justremotephone/aosp_build" remote="github" revision="jf8" /> 
+  <project path="vendor/opengapps/sources/all" name="justremotephone/all" clone-depth="1" remote="github" revision="jf8" />
+  <project path="vendor/opengapps/sources/arm" name="justremotephone/arm" clone-depth="1" remote="github" revision="jf8" />
   
   
   <project path="build/blueprint" name="platform/build/blueprint" groups="pdk,tradefed" />
